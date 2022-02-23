@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "opties",
+  "info": {
+    "singularName": "optie",
+    "pluralName": "opties",
+    "displayName": "opties"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vraag": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vraag.vraag",
+      "inversedBy": "opties"
+    },
+    "optie": {
+      "type": "string"
+    },
+    "antwoord": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::antwoord.antwoord",
+      "inversedBy": "optie"
+    }
+  }
+}

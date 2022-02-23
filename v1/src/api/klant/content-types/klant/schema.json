@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "klanten",
+  "info": {
+    "singularName": "klant",
+    "pluralName": "klanten",
+    "displayName": "klant"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "naam": {
+      "type": "string"
+    },
+    "mail": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "website": {
+      "type": "string"
+    },
+    "enquetes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::enquete.enquete",
+      "mappedBy": "klant"
+    }
+  }
+}

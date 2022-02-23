@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vragen",
+  "info": {
+    "singularName": "vraag",
+    "pluralName": "vragen",
+    "displayName": "vragen"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vraag": {
+      "type": "text"
+    },
+    "type": {
+      "type": "string"
+    },
+    "enquete": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::enquete.enquete",
+      "inversedBy": "vragen"
+    },
+    "opties": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::optie.optie",
+      "mappedBy": "vraag"
+    },
+    "antwoord": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::antwoord.antwoord",
+      "inversedBy": "vraag"
+    }
+  }
+}

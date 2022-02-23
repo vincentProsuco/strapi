@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "antwoorden",
+  "info": {
+    "singularName": "antwoord",
+    "pluralName": "antwoorden",
+    "displayName": "antwoorden"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "antwoord": {
+      "type": "string"
+    },
+    "vraag": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vraag.vraag",
+      "inversedBy": "antwoord"
+    },
+    "optie": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::optie.optie",
+      "inversedBy": "antwoord"
+    }
+  }
+}
