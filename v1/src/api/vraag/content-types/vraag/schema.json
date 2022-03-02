@@ -4,7 +4,8 @@
   "info": {
     "singularName": "vraag",
     "pluralName": "vragen",
-    "displayName": "vragen"
+    "displayName": "vragen",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,17 +24,14 @@
       "target": "api::enquete.enquete",
       "inversedBy": "vragen"
     },
-    "opties": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::optie.optie",
-      "mappedBy": "vraag"
-    },
     "antwoord": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::antwoord.antwoord",
       "inversedBy": "vraag"
+    },
+    "opties": {
+      "type": "json"
     }
   }
 }

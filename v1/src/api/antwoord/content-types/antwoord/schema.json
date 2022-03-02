@@ -18,13 +18,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::vraag.vraag",
-      "inversedBy": "antwoord"
-    },
-    "optie": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::optie.optie",
-      "inversedBy": "antwoord"
+      "mappedBy": "antwoord"
     }
   }
 }
